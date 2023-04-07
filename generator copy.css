@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Syne Mono', monospace;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgb(238, 11, 11) ,rgba(0, 0, 0, 0.67));
+  /* z-index: -1; */
+  
+}
+.wrapper{
+   height: 100%;
+   width: 100%; 
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    flex-direction: column;
+  gap: 8px;
+     overflow: hidden; 
+    background-color: rgba(0, 0, 0, 0.922); 
+   
+   z-index: -1;
+   
+}
+.wrapper::before{
+    content: " ";
+    background: url("lock.jpg") ;
+   
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+  
+     
+}
+
+.display-container {
+    position: relative;
+    z-index: 1;
+    /* border: 3px solid rgb(255, 255, 255); */
+    /* border-image: linear-gradient(#f6b025, #55b308) 30;
+border-width: 4px;
+border-style: solid; */
+background: linear-gradient(rgb(243, 148, 70), rgba(119, 124, 7, 0)) ,
+linear-gradient(to right, rgb(76, 139, 0), darkorchid) border-box;
+border-radius: 20px;
+border: 4px solid transparent;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.display-container button{
+    margin: 10px;
+    background-color: transparent;
+    color: aquamarine;
+    border: none;
+    width: 10%;
+    height: 60%;
+    transform: scale(1.5);
+    
+}
+.display{
+    padding: 1.15rem 1rem;
+    padding-right: 3.25rem;
+    background-color: transparent;
+    font-weight: 680;
+    color: rgba(255, 132, 0, 0.978);
+    line-height: 8px;
+    width: 100%;
+    font-size: 1.5rem;
+    border: none;
+}
+.display::placeholder{
+    position: absolute;
+ color: rgba(255, 255, 0, 0.553);
+    left: 1.5rem;
+}
+h1{
+    z-index:1;
+    font-size: 72px;
+  background: -webkit-linear-gradient(#eee, #a81515);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
+.input-container{
+    
+        background: linear-gradient(rgb(243, 148, 70), rgba(118, 124, 7, 0.793)) padding-box,
+        linear-gradient(to right, rgb(93, 139, 0), darkorchid) border-box;
+       
+        border: 4px solid transparent;
+    
+    z-index: 1;
+    /* border: 3px solid rgb(255, 255, 255) ; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 10px;
+    gap: 15px;
+}
+.check{
+    color: #1c5e90e4; 
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bolder;
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(249, 240, 240);
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+.check input:checked{
+    background-color: aquamarine;
+}
+.check input:checked::before{
+    content: "✔";
+    position: absolute;
+    transform: translateX(-50%) translateY(10%);
+    
+    font-size: 1.05rem;
+    line-height: 20px;
+    font-weight: 600;
+    left: 50%;
+    top: -3.5px;
+
+}
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(8, 139, 49);
+    font-size: 24px;
+}
+
+.slider {
+background-color: rgba(255, 200, 0, 0.64);
+appearance: none;
+border-radius: 8px;
+margin-top: 2rem;
+margin-bottom: 1.5rem;
+height: 0.75rem;
+cursor: pointer;
+
+}
+.slider::-webkit-slider-thumb{
+   position: relative;
+     appearance: none;
+     height: 1.5rem;
+     width: 1.5rem;
+     border-radius: 50%;
+     cursor: pointer;
+     background-color: rgb(72, 255, 0);
+     box-shadow: 0px 0px 20px 5px rgb(251, 21, 0);
+     transition: all 100ms ease-in;
+}
+.slider:focus{
+    outline: solid rgb(236, 210, 16);
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid yellow;
+    background-color: black;
+    box-shadow: 0px 0px 25px 5px rgba(255, 204, 0, 0.859);
+}
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    /* padding-right: 10px; */
+    color:  #901c1ee4; 
+}
+.strength-container div{
+    border: 1px;
+    height: 20px;
+    width: 20px;
+    /* background-color: white; */
+    border-radius: 50%;
+    
+    /* box-shadow: 0px 0px 20px 5px rgba(250, 250, 250, 0.764); */
+}
+.generateButton{
+    color: rgba(20, 236, 20, 0.889);
+    background-color: rgba(226, 34, 13, 0.658);
+    border-radius: 6px;
+    height: 38px;
+    font-size: 1.05rem;
+    line-height: 20px;
+    font-weight: 600;
+    left: 50%;
+    top: -3.5px;
+   border: none;
+}
+
+
